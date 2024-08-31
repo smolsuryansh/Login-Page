@@ -21,7 +21,7 @@ html{
 
 body{
     min-height: 100vh;
-    background-image: url(resources/pixels-art.jpg);
+    background-image: url(/pictures/pixels-art.jpg);
     background-size: cover;
     background-position: right;
     overflow: hidden; /* to ensure this is not a scroll over website */

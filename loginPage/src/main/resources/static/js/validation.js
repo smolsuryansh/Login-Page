@@ -1,21 +1,23 @@
+// const { express } = require("express")
+
 const form = document.getElementById('form')
-const firstname_input = document.getElementById('firstname-input')
-const email_input = document.getElementById('email-input')
-const password_input = document.getElementById('password-input')
+const userName = document.getElementById('firstname-input')
+const email = document.getElementById('email-input')
+const password = document.getElementById('password-input')
 const repeat_password_input = document.getElementById('repeat-password-input')
 const error_message = document.getElementById('error-message')
 
 form.addEventListener('submit', (e) => {
-    // e.preventDefault() prevent submit
+    e.preventDefault() // prevent submit
 
     let errors = []
 
-    if(firstname_input) {
+    if(userName) {
         // if we have first name input then we are in the singup
-        errors = getSignupFormErrors(firstname_input.value, email_input.value, password_input.value, repeat_password_input.value)
+        errors = getSignupFormErrors(userName.value, email.value, password.value, repeat_password_input.value)
     } else {
         // else we are in the login
-        errors = getLoginFormErrors(email_input.value, password_input.value)
+        errors = getLoginFormErrors(email.value, password.value)
     }
 
     if(errors.length > 0) {
@@ -23,34 +25,35 @@ form.addEventListener('submit', (e) => {
         e.preventDefault()
         error_message.innerText = errors.join(". ")
     }
+
 })
 
-function getSignupFormErrors(firstname, email, password, repeatPassword) {
+function getSignupFormErrors(userName, email, password, repeatPassword) {
     let errors = []
 
-    if (firstname === "" || firstname == null) {
+    if (userName === "" || userName == null) {
         errors.push("Firstname is required")
-        firstname_input.parentElement.classList.add("incorrect")
+        userName.parentElement.classList.add("incorrect")
     }
 
     if (email === "" || email == null) {
         errors.push("Email is required")
-        email_input.parentElement.classList.add("incorrect")
+        email.parentElement.classList.add("incorrect")
     }
 
     if (password === "" || password == null) {
         errors.push("Password is required")
-        password_input.parentElement.classList.add("incorrect")
+        password.parentElement.classList.add("incorrect")
     }
 
     if(password.length < 8) {
         errors.push("Password must have at least 8 characters")
-        password_input.parentElement.classList.add("incorrect")
+        password.parentElement.classList.add("incorrect")
     }
 
     if(password !== repeatPassword) {
         errors.push("Password does not match repeated password")
-        password_input.parentElement.classList.add("incorrect")
+        password.parentElement.classList.add("incorrect")
         repeat_password_input.parentElement.classList.add("incorrect")
     }
 
@@ -62,18 +65,18 @@ function getLoginFormErrors(email, password) {
 
     if (email === "" || email == null) {
         errors.push("Email is required")
-        email_input.parentElement.classList.add("incorrect")
+        email.parentElement.classList.add("incorrect")
     }
 
     if (password === "" || password == null) {
         errors.push("Password is required")
-        password_input.parentElement.classList.add("incorrect")
+        password.parentElement.classList.add("incorrect")
     }
 
     return errors
 }
 
-const allInputs = [firstname_input, email_input, password_input, repeat_password_input].filter(input => input != null) // filter to ensure no errors for login
+const allInputs = [userName, email, password, repeat_password_input].filter(input => input != null) // filter to ensure no errors for login
 
 allInputs.forEach(input => {
     input.addEventListener('input', () => {

@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-    <link rel="stylesheet" href="style.css">
-    <script type="text/javascript" src="validation.js" defer></script>
+    <link rel="stylesheet" href="/css/style.css">
+    <script type="text/javascript" src="/js/validation.js" defer></script>
 </head>
 <body>
     <div class="wrapper">
         <h1>Login</h1>
         <p id="error-message"></p>
-        <form id="form">
+        <form id="form" action="/auth/login" method="post">
             
             <div>
                 <label for="email-input">
@@ -33,7 +33,9 @@
 
         </form>
 
-        <p>New hear? <a href="signup.html">Create an Account</a></p>
+        <p>New here? <a href="signup.html">Create an Account</a></p>
+        <!-- for thymeleaf: -->
+        <!-- <p>New here? <a th:href="@{/signup}">Create an Account</a></p> -->
 
     </div>
 </body>
