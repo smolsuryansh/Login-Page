@@ -8,12 +8,12 @@ const repeat_password_input = document.getElementById('repeat-password-input')
 const error_message = document.getElementById('error-message')
 
 form.addEventListener('submit', (e) => {
-    e.preventDefault() // prevent submit
+    // e.preventDefault() // prevent submit
 
     let errors = []
 
-    if(userName) {
-        // if we have first name input then we are in the singup
+    if(email) {
+        // if we have email input then we are in the signup
         errors = getSignupFormErrors(userName.value, email.value, password.value, repeat_password_input.value)
     } else {
         // else we are in the login
@@ -60,12 +60,12 @@ function getSignupFormErrors(userName, email, password, repeatPassword) {
     return errors;
 }
 
-function getLoginFormErrors(email, password) {
+function getLoginFormErrors(userName, password) {
     let errors = []
 
-    if (email === "" || email == null) {
-        errors.push("Email is required")
-        email.parentElement.classList.add("incorrect")
+    if (userName === "" || userName == null) {
+        errors.push("Username is required")
+        userName.parentElement.classList.add("incorrect")
     }
 
     if (password === "" || password == null) {
