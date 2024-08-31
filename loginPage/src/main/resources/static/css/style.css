@@ -1,11 +1,12 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap');
+
 /* both the font families are same */
-@font-face {
+/* @font-face {
     font-family: 'pixel';
-    src: url('resources/static/fonts/pixel.ttf') format('truetype');
+    src: url('../resources/static/fonts/pixel.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
-}
+} */
 
 :root{
     --accent-color: #aa78ba;
@@ -21,7 +22,7 @@
 
 html{
     /* change the name of font family to use google fonts, below */
-    font-family: 'pixel';
+    font-family: 'Pixelify Sans';
     font-size: 12pt;
     color: var(--text-color);
     text-align: center;
@@ -29,7 +30,7 @@ html{
 
 body{
     min-height: 100vh;
-    background-image: url(static/pictures/background.gif);
+    background-image: url(/pictures/background.gif);
     background-size: cover;
     background-position: right;
     overflow: hidden; /* to ensure this is not a scroll over website */

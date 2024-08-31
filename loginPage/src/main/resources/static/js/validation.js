@@ -17,7 +17,7 @@ form.addEventListener('submit', (e) => {
         errors = getSignupFormErrors(userName.value, email.value, password.value, repeat_password_input.value)
     } else {
         // else we are in the login
-        errors = getLoginFormErrors(email.value, password.value)
+        errors = getLoginFormErrors(userName.value, password.value)
     }
 
     if(errors.length > 0) {
