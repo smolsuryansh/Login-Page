@@ -1,5 +1,6 @@
 package com.hammy.loginPage.entity;
 
+import jakarta.validation.constraints.NotBlank;
 import lombok.*;
 import org.bson.types.ObjectId;
 import org.springframework.data.annotation.Id;
@@ -18,10 +19,13 @@ public class User {
 
     @Indexed(unique = true)
     @NonNull
+//    @NotBlank(message = "Username is required")
     private String userName;
 
+//    @NotBlank(message = "Email is required")
     private String email;
 
     @NonNull
+//    @NotBlank(message = "Password is required")
     private String password;
 }
