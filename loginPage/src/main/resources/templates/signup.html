@@ -4,12 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Signup</title>
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/loginPage/src/main/resources/templates/signup.css">
 </head>
 <body>
     <div class="wrapper">
         <h1>Signup</h1>
         <p id="error-message"></p>
+
+        <!-- where is this auth folder located? the filepath is inncorrect--> 
         <form id="form" action="/auth/signup" method="post">
 
             <div>
@@ -52,12 +54,11 @@
         
     </div>
 
-    <script src="/js/validation.js" defer></script>
 
-</body>
-</html>
 
-<script>
+
+
+   <script src="/loginPage/src/main/resources/static/js/validation.js" defer>
 
     const submitButton = document.getElementById("submit");
     submitButton.addEventListener('click', () => {
@@ -97,3 +98,6 @@
     })
     
 </script>
+
+</body>
+</html>
