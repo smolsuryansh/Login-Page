@@ -1,0 +1,151 @@
+/* General styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+  background-color: #252A41;
+}
+
+.wrapper {
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 5px;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Form styles */
+form {
+  display: flex; /* Arrange form elements horizontally */
+  flex-direction: column; /* Stack elements vertically one below another */
+  gap: 10px; /* Add spacing between elements */
+}
+
+label {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+input[type="text"], input[type="email"], input[type="password"] {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  width: 100%;
+}
+
+button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+/* Link styles */
+a {
+  color: #007bff;
+  text-decoration: none; 
+}
+
+
+
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+}
+
+.wrapper {
+  width: 400px; /* Adjust width as needed */
+  margin: 50px auto; /* Center the form */
+  padding: 20px;
+  border-radius: 5px; /* Add rounded corners */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Input Styles */
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+  width: 100%;
+  padding: 10px; /* Adjust padding if needed */
+  border: 1px solid #ccc;
+  border-radius: 5px; /* Rounded corners */
+  box-sizing: border-box; /* Include padding in width */
+  transition: border-color 0.2s ease-in-out; /* Smooth border transition */
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus {
+  border-color: #4CAF50; /* Green border on focus */
+}
+
+/* Button Styles */
+button {
+  display: block;
+  width: 100%;
+  padding: 15px 20px; /* Adjust padding as needed */
+  background-color: #4CAF50; /* Green background */
+  color: white;
+  border: none;
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out; /* Smooth background transition */
+}
+
+button:hover {
+  background-color: #3e8e41; /* Darker green on hover */
+}
+
+/* Animation (Optional) */
+@keyframes button-pulse {
+  0% {
+      transform: scale(1);
+  }
+  50% {
+      transform: scale(1.05);
+  }
+  100% {
+      transform: scale(1);
+  }
+}
+
+
+
+/* Other Styles */
+p {
+  text-align: center;
+  margin-top: 10px;
+}
+
+a {
+  color: #4CAF50; 
+  text-decoration: none;
+}
+
+a:hover {
+  color: #3e8e41; /* Darker green on hover */
+}
+
+
